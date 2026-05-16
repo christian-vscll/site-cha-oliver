@@ -5,7 +5,7 @@
     "description": "Pacote de fraldas tamanho M",
     "price": 80,
     "image": "",
-    "stripePaymentLink": ""
+    "stripePaymentLink": "https://buy.stripe.com/test_28E28kauScvGa8deB60sU00"
   },
   {
     "id": "item-02",
@@ -13,7 +13,7 @@
     "description": "Pacote de fraldas tamanho G",
     "price": 80,
     "image": "",
-    "stripePaymentLink": ""
+    "stripePaymentLink": "https://buy.stripe.com/test_3cI4gscD0dzK3JPcsY0sU01"
   },
   {
     "id": "item-03",
@@ -21,7 +21,7 @@
     "description": "Banheira anatômica com suporte",
     "price": 120,
     "image": "",
-    "stripePaymentLink": ""
+    "stripePaymentLink": "https://buy.stripe.com/test_00w28kdH47bm3JPeB60sU02"
   },
   {
     "id": "item-04",
@@ -29,7 +29,7 @@
     "description": "Escova, pente, cortador de unhas e termômetro",
     "price": 90,
     "image": "",
-    "stripePaymentLink": ""
+    "stripePaymentLink": "https://buy.stripe.com/test_4gM9AM9qO3Za1BH0Kg0sU03"
   },
   {
     "id": "item-05",
@@ -37,7 +37,7 @@
     "description": "Berço dobrável para viagens e uso diário",
     "price": 450,
     "image": "",
-    "stripePaymentLink": ""
+    "stripePaymentLink": "https://buy.stripe.com/test_bJeaEQ9qO7bm1BH50w0sU04"
   },
   {
     "id": "item-06",
@@ -45,6 +45,6 @@
     "description": "Carrinho leve com capota e porta-objetos",
     "price": 800,
     "image": "",
-    "stripePaymentLink": ""
+    "stripePaymentLink": "https://buy.stripe.com/test_6oU3cogTg53ebcheB60sU05"
   }
 ]
