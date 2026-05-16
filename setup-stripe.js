@@ -4,12 +4,21 @@ const fs = require('fs');
 const key = process.env.STRIPE_SECRET_KEY;
 if (!key) {
   console.error('Erro: defina a variável STRIPE_SECRET_KEY antes de rodar o script.');
-  console.error('Exemplo: $env:STRIPE_SECRET_KEY="sk_test_..."; node setup-stripe.js');
+  console.error('Exemplo: $env:STRIPE_SECRET_KEY="sk_live_..."; node setup-stripe.js --reset');
   process.exit(1);
 }
 
+const reset = process.argv.includes('--reset');
 const stripe = Stripe(key);
 const gifts = JSON.parse(fs.readFileSync('gifts.json', 'utf8'));
+
+if (reset) {
+  console.log('Modo --reset: apagando links existentes e recriando todos...\n');
+  gifts.forEach(g => { g.stripePaymentLink = ''; });
+}
+
+const isLive = key.startsWith('sk_live_');
+console.log('Modo:', isLive ? '🟢 PRODUÇÃO (live)' : '🟡 Teste (test)', '\n');
 
 async function main() {
   for (const gift of gifts) {
