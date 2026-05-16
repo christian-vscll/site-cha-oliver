@@ -7,28 +7,202 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Textura de papel -->
+  <svg class="textura" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="papel">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#papel)" opacity="0.045"/>
+  </svg>
+
+  <!-- Bandeirinhas -->
+  <svg class="bandeirinhas" viewBox="0 0 390 128" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <filter id="rabisco" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.038" numOctaves="3" seed="7"/>
+        <feDisplacementMap in="SourceGraphic" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+
+    <!-- Fio 1 (bandeirinhas triangulares) -->
+    <path d="M-2,30 C60,18 140,26 195,20 S310,8 392,26"
+          stroke="#c8b4a0" stroke-width="1.3" fill="none" filter="url(#rabisco)" opacity="0.6"/>
+
+    <!-- Bandeirinhas -->
+    <polygon points="8,28 28,28 18,54"   fill="#9ab5ca" opacity="0.88" filter="url(#rabisco)"/>
+    <polygon points="53,22 73,22 63,48"  fill="#c25252" opacity="0.82" filter="url(#rabisco)"/>
+    <polygon points="98,22 118,22 108,48" fill="#6b8c68" opacity="0.88" filter="url(#rabisco)"/>
+    <polygon points="143,23 163,23 153,49" fill="#b5c4d8" opacity="0.85" filter="url(#rabisco)"/>
+    <polygon points="185,20 205,20 195,46" fill="#9ab5ca" opacity="0.88" filter="url(#rabisco)"/>
+    <polygon points="228,15 248,15 238,41" fill="#c25252" opacity="0.82" filter="url(#rabisco)"/>
+    <polygon points="273,12 293,12 283,38" fill="#6b8c68" opacity="0.88" filter="url(#rabisco)"/>
+    <polygon points="320,14 340,14 330,40" fill="#b5c4d8" opacity="0.85" filter="url(#rabisco)"/>
+    <polygon points="365,22 385,22 375,48" fill="#9ab5ca" opacity="0.88" filter="url(#rabisco)"/>
+
+    <!-- Fio 2 (borlas/tassels) -->
+    <path d="M-2,67 C60,55 140,63 195,57 S310,45 392,63"
+          stroke="#c8b4a0" stroke-width="1.3" fill="none" filter="url(#rabisco)" opacity="0.6"/>
+
+    <!-- Tassels -->
+    <g filter="url(#rabisco)" opacity="0.87">
+      <ellipse cx="15"  cy="65" rx="5.5" ry="3.5" fill="#8faa8c"/>
+      <line x1="11" y1="67" x2="10" y2="89" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="14" y1="67" x2="14" y2="91" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="17" y1="67" x2="18" y2="90" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="20" y1="67" x2="21" y2="88" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="57"  cy="58" rx="5.5" ry="3.5" fill="#9ab5ca"/>
+      <line x1="53" y1="60" x2="52" y2="82" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+      <line x1="56" y1="60" x2="56" y2="84" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+      <line x1="59" y1="60" x2="60" y2="83" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+      <line x1="62" y1="60" x2="63" y2="81" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="98"  cy="59" rx="5.5" ry="3.5" fill="#c4a882"/>
+      <line x1="94" y1="61" x2="93" y2="83" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="97" y1="61" x2="97" y2="85" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="100" y1="61" x2="101" y2="84" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="103" y1="61" x2="104" y2="82" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="140" cy="60" rx="5.5" ry="3.5" fill="#8faa8c"/>
+      <line x1="136" y1="62" x2="135" y2="84" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="139" y1="62" x2="139" y2="86" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="142" y1="62" x2="143" y2="85" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="145" y1="62" x2="146" y2="83" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="180" cy="58" rx="5.5" ry="3.5" fill="#b5c4d8"/>
+      <line x1="176" y1="60" x2="175" y2="82" stroke="#b5c4d8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="179" y1="60" x2="179" y2="84" stroke="#b5c4d8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="182" y1="60" x2="183" y2="83" stroke="#b5c4d8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="185" y1="60" x2="186" y2="81" stroke="#b5c4d8" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="222" cy="57" rx="5.5" ry="3.5" fill="#c4a882"/>
+      <line x1="218" y1="59" x2="217" y2="81" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="221" y1="59" x2="221" y2="83" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="224" y1="59" x2="225" y2="82" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="227" y1="59" x2="228" y2="80" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="263" cy="53" rx="5.5" ry="3.5" fill="#8faa8c"/>
+      <line x1="259" y1="55" x2="258" y2="77" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="262" y1="55" x2="262" y2="79" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="265" y1="55" x2="266" y2="78" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="268" y1="55" x2="269" y2="76" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="307" cy="49" rx="5.5" ry="3.5" fill="#9ab5ca"/>
+      <line x1="303" y1="51" x2="302" y2="73" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+      <line x1="306" y1="51" x2="306" y2="75" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+      <line x1="309" y1="51" x2="310" y2="74" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+      <line x1="312" y1="51" x2="313" y2="72" stroke="#9ab5ca" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="350" cy="51" rx="5.5" ry="3.5" fill="#c4a882"/>
+      <line x1="346" y1="53" x2="345" y2="75" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="349" y1="53" x2="349" y2="77" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="352" y1="53" x2="353" y2="76" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+      <line x1="355" y1="53" x2="356" y2="74" stroke="#c4a882" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g filter="url(#rabisco)" opacity="0.85">
+      <ellipse cx="385" cy="60" rx="5.5" ry="3.5" fill="#8faa8c"/>
+      <line x1="381" y1="62" x2="380" y2="84" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="384" y1="62" x2="384" y2="86" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+      <line x1="387" y1="62" x2="388" y2="85" stroke="#8faa8c" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </svg>
+
+  <!-- Página inicial -->
   <main class="home">
-    <div class="home__icon">🐰</div>
+    <div class="home__coelho" id="coelho">🐰</div>
     <p class="home__label">chá do baby</p>
     <h1 class="home__nome">oliver</h1>
     <p class="home__info">
-      03/06/2026 · 14h00<br>
+      04/06/2026 · 14h00<br>
       Condomínio Vivaz<br>
       Rua Goiás, 500 — Piedade, RJ
     </p>
     <div class="home__botoes">
-      <a
-        class="btn btn--mapa"
-        href="https://maps.google.com/?q=Rua+Goiás,+500,+Piedade,+Rio+de+Janeiro,+RJ"
-        target="_blank"
-        rel="noopener"
-      >
+      <a class="btn btn--mapa"
+         href="https://maps.google.com/?q=Rua+Goiás,+500,+Piedade,+Rio+de+Janeiro,+RJ"
+         target="_blank" rel="noopener">
         📍 Como chegar
       </a>
-      <a class="btn btn--presentes" href="lista.html">
+      <button class="btn btn--presentes" onclick="abrirModal()">
         🎁 Lista de presentes
-      </a>
+      </button>
     </div>
   </main>
+
+  <!-- Botão flutuante fechar -->
+  <button class="btn-fechar" id="btnFechar" onclick="fecharModal()" aria-label="Voltar">
+    ←
+  </button>
+
+  <!-- Modal lista de presentes -->
+  <div class="modal" id="modal" role="dialog" aria-label="Lista de Presentes">
+    <header class="lista-header">
+      <h2 class="lista-header__titulo">Lista de Presentes</h2>
+      <p class="lista-header__sub">escolha o que quiser presentear 🎁</p>
+    </header>
+    <div id="grid" class="lista-grid"></div>
+  </div>
+
+  <script>
+    // Tenta carregar imagem real do coelho
+    var img = new Image();
+    img.onload = function () {
+      var el = document.getElementById('coelho');
+      el.innerHTML = '';
+      el.appendChild(img);
+    };
+    img.src = 'imagens/coelho.png';
+    img.alt = 'Coelhinho Oliver';
+    img.className = 'home__coelho-img';
+
+    // Modal
+    function abrirModal() {
+      document.getElementById('modal').classList.add('aberto');
+      document.getElementById('btnFechar').classList.add('visivel');
+      document.body.classList.add('modal-aberto');
+    }
+
+    function fecharModal() {
+      document.getElementById('modal').classList.remove('aberto');
+      document.getElementById('btnFechar').classList.remove('visivel');
+      document.body.classList.remove('modal-aberto');
+    }
+
+    // Carregar presentes
+    fetch('gifts.json')
+      .then(function(r) { return r.json(); })
+      .then(function(gifts) {
+        var grid = document.getElementById('grid');
+        grid.innerHTML = gifts.map(function(g) {
+          var imgHtml = g.image
+            ? '<img src="' + g.image + '" alt="' + g.name + '" loading="lazy">'
+            : '🎁';
+          var btn = g.stripePaymentLink
+            ? '<a class="card__btn" href="' + g.stripePaymentLink + '" target="_blank" rel="noopener">Presentear</a>'
+            : '<span class="card__btn card__btn--indisponivel">Em breve</span>';
+          return '<article class="card">'
+            + '<div class="card__img">' + imgHtml + '</div>'
+            + '<div class="card__body">'
+            + '<p class="card__nome">' + g.name + '</p>'
+            + '<p class="card__preco">R$ ' + g.price.toLocaleString('pt-BR') + '</p>'
+            + btn
+            + '</div></article>';
+        }).join('');
+      })
+      .catch(function() {
+        document.getElementById('grid').innerHTML =
+          '<p class="lista-erro">Não foi possível carregar a lista.</p>';
+      });
+  </script>
 </body>
 </html>

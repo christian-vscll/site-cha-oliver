@@ -14,43 +14,83 @@ body {
   background: var(--creme);
   color: var(--texto);
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body.modal-aberto { overflow: hidden; }
+
+/* Textura de papel */
+.textura {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Bandeirinhas */
+.bandeirinhas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: block;
 }
 
 /* ── Página inicial ─────────────────────────── */
 
 .home {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 32px 24px;
+  padding: 145px 24px 48px;
   text-align: center;
-  gap: 8px;
+  gap: 6px;
 }
 
-.home__icon { font-size: 64px; margin-bottom: 8px; }
+.home__coelho {
+  width: 170px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 88px;
+  margin-bottom: 4px;
+}
+
+.home__coelho-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 .home__label {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
   color: var(--texto-suave);
+  letter-spacing: 1px;
 }
 
 .home__nome {
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 48px;
+  font-size: 52px;
   color: var(--salvia);
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .home__info {
   font-size: 14px;
   color: var(--texto-suave);
-  line-height: 1.8;
-  margin-top: 8px;
+  line-height: 1.9;
+  margin-top: 10px;
 }
 
 .home__botoes {
@@ -59,7 +99,7 @@ body {
   gap: 12px;
   width: 100%;
   max-width: 280px;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .btn {
@@ -70,45 +110,79 @@ body {
   border-radius: 50px;
   font-size: 15px;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
   transition: opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.btn:active { opacity: 0.8; }
-
+.btn:active { opacity: 0.75; }
 .btn--mapa      { background: var(--salvia);   color: #fff; }
 .btn--presentes { background: var(--caramelo); color: #fff; }
 
-/* ── Lista de presentes ─────────────────────── */
+/* ── Botão flutuante fechar ─────────────────── */
+
+.btn-fechar {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 300;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.14);
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto);
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.2s;
+}
+
+.btn-fechar.visivel { display: flex; }
+.btn-fechar:active  { opacity: 0.7; }
+
+/* ── Modal ──────────────────────────────────── */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: var(--creme);
+  z-index: 200;
+  transform: translateY(100%);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal.aberto { transform: translateY(0); }
 
 .lista-header {
   background: var(--salvia);
-  padding: 20px 16px 16px;
+  padding: 24px 16px 16px;
   color: #fff;
-}
-
-.lista-header__voltar {
-  display: inline-block;
-  font-size: 13px;
-  color: rgba(255,255,255,0.8);
-  text-decoration: none;
-  margin-bottom: 8px;
 }
 
 .lista-header__titulo {
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .lista-header__sub {
   font-size: 12px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.78);
   margin-top: 4px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
+
+/* ── Grade de presentes ─────────────────────── */
 
 .lista-grid {
   display: grid;
@@ -117,11 +191,18 @@ body {
   padding: 12px;
 }
 
+.lista-erro {
+  padding: 32px 16px;
+  color: var(--texto-suave);
+  font-size: 14px;
+  text-align: center;
+}
+
 .card {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
 }
@@ -133,7 +214,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 36px;
+  font-size: 38px;
+  overflow: hidden;
 }
 
 .card__img img {
@@ -178,6 +260,13 @@ body {
   text-decoration: none;
   text-align: center;
   transition: opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card__btn:active { opacity: 0.8; }
+
+.card__btn--indisponivel {
+  background: var(--bege);
+  color: var(--texto-suave);
+  cursor: default;
+}
