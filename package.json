@@ -1,0 +1,11 @@
+{
+  "name": "cha-oliver-stripe-setup",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "node setup-stripe.js"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
