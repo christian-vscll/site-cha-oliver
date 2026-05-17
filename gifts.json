@@ -1,58 +1,90 @@
 [
   {
     "id": "item-01",
-    "name": "Kit Fraldas M",
-    "description": "Pacote de fraldas tamanho M",
-    "price": 80,
+    "name": "Toalha de Bebê",
+    "description": "",
+    "price": 20,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-1aa39315-7776-439e-89d7-c1d2d6fab3cf"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-cd9ffb53-99aa-440f-afc2-689b77667d83"
   },
   {
     "id": "item-02",
-    "name": "Kit Fraldas G",
-    "description": "Pacote de fraldas tamanho G",
-    "price": 80,
+    "name": "Kit Escova",
+    "description": "",
+    "price": 30,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-17cad14c-9a06-45b8-8a24-878f42b42019"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-d8d007dd-98b3-4006-9e78-37bb53a6fcac"
   },
   {
     "id": "item-03",
-    "name": "Banheira de Bebê",
-    "description": "Banheira anatômica com suporte",
-    "price": 120,
+    "name": "Chocalho",
+    "description": "",
+    "price": 15,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-60a000f6-a92f-434c-b35c-3ef22ab77256"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-510597b3-2b23-4804-a172-4338606c29bf"
   },
   {
     "id": "item-04",
-    "name": "Kit Higiene Bebê",
-    "description": "Escova, pente, cortador de unhas e termômetro",
-    "price": 90,
+    "name": "Babá Eletrônica",
+    "description": "",
+    "price": 100,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-998d9861-7933-4a7e-bfb0-fb0abbb57190"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-10eb5593-c8d7-4f81-96e5-f2b33cae306c"
   },
   {
     "id": "item-05",
-    "name": "Berço Portátil",
-    "description": "Berço dobrável para viagens e uso diário",
-    "price": 450,
+    "name": "Lixeira Antiodor",
+    "description": "",
+    "price": 130,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-c2489ef9-3ace-4ecc-b72b-b939af168fe2"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-c1ca9564-afa0-4dbe-aabd-35428c7f8d42"
   },
   {
     "id": "item-06",
-    "name": "Carrinho de Bebê",
-    "description": "Carrinho leve com capota e porta-objetos",
-    "price": 800,
+    "name": "Carrinho Organizador",
+    "description": "",
+    "price": 100,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-34fbb29f-9b48-474a-9d5d-9d1547077b2d"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-3f776e95-ee45-4125-81c1-5986399ad242"
   },
   {
-    "id": "item-teste",
-    "name": "Teste R$1",
-    "description": "Item de teste — remover depois",
-    "price": 1,
+    "id": "item-07",
+    "name": "Garrafinha de Bebê",
+    "description": "",
+    "price": 25,
     "image": "",
-    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-7576ba1a-1440-493c-b645-d21ff7e8c919"
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-3033dd38-677a-40df-b910-c150f515a28d"
+  },
+  {
+    "id": "item-08",
+    "name": "Tapete Interativo",
+    "description": "",
+    "price": 67,
+    "image": "",
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-6cd89e62-227e-4896-b586-4e348c929a94"
+  },
+  {
+    "id": "item-09",
+    "name": "Kit Refeição",
+    "description": "",
+    "price": 25,
+    "image": "",
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-776e62bc-7e53-4495-b9c2-fd6af8fdb62d"
+  },
+  {
+    "id": "item-10",
+    "name": "Sabonete Johnson",
+    "description": "",
+    "price": 40,
+    "image": "",
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-077922cd-d162-4d19-8498-e0f9f12bfc0a"
+  },
+  {
+    "id": "item-11",
+    "name": "Kit Lixa de Unha",
+    "description": "",
+    "price": 20,
+    "image": "",
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-0fb0b668-212b-4358-8042-66495fb064ba"
   }
 ]
