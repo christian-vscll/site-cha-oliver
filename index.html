@@ -134,7 +134,10 @@
         📍 Como chegar
       </a>
       <button class="btn btn--presentes" onclick="abrirModal()">
-        🎁 Lista de presentes
+        🎁 Lista de Mimos
+      </button>
+      <button class="btn btn--confirmacao" onclick="abrirConfirmacao()">
+        ✉️ Confirmar presença
       </button>
     </div>
   </main>
@@ -147,12 +150,31 @@
   </button>
 
   <!-- Modal lista de presentes -->
-  <div class="modal" id="modal" role="dialog" aria-label="Lista de Presentes">
+  <div class="modal" id="modal" role="dialog" aria-label="Lista de Mimos">
     <header class="lista-header">
-      <h2 class="lista-header__titulo">Lista de Presentes</h2>
+      <h2 class="lista-header__titulo">Lista de Mimos</h2>
       <p class="lista-header__sub">escolha o que quiser presentear 🎁</p>
+      <p class="lista-header__desc">🎀 Nossa lista é simbólica — ao escolher um mimo, você contribui com o valor via Pix ou cartão e nós mesmos compramos cada item com carinho para o Oliver. Sua presença já é o maior presente! 💛</p>
     </header>
     <div id="grid" class="lista-grid"></div>
+  </div>
+
+  <!-- Modal confirmação de presença -->
+  <div class="modal" id="modal-confirmacao" role="dialog" aria-label="Confirmar Presença">
+    <header class="lista-header">
+      <h2 class="lista-header__titulo">Confirmar Presença</h2>
+      <p class="lista-header__sub">confirme sua presença no Chá do Oliver 🐰</p>
+    </header>
+    <div class="confirmacao-body">
+      <p class="confirmacao-pergunta">Você vai poder<br>comparecer?</p>
+      <input type="text" id="nomeConvidado" class="confirmacao-input"
+             placeholder="Seu nome completo" maxlength="60"
+             oninput="this.classList.remove('erro')">
+      <div class="confirmacao-botoes">
+        <button class="btn-confirmacao btn-confirmacao--sim" onclick="confirmarPresenca(true)">🎉 Sim, vou estar lá!</button>
+        <button class="btn-confirmacao btn-confirmacao--nao" onclick="confirmarPresenca(false)">😢 Não poderei comparecer</button>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -167,17 +189,48 @@
     img.alt = 'Coelhinho Oliver';
     img.className = 'home__coelho-img';
 
-    // Modal
+    var WHATSAPP = '5521998340556';
+    var modalAberto = null;
+
     function abrirModal() {
+      modalAberto = 'mimos';
       document.getElementById('modal').classList.add('aberto');
       document.getElementById('btnFechar').classList.add('visivel');
       document.body.classList.add('modal-aberto');
     }
 
+    function abrirConfirmacao() {
+      modalAberto = 'confirmacao';
+      document.getElementById('modal-confirmacao').classList.add('aberto');
+      document.getElementById('btnFechar').classList.add('visivel');
+      document.body.classList.add('modal-aberto');
+    }
+
     function fecharModal() {
-      document.getElementById('modal').classList.remove('aberto');
+      if (modalAberto === 'mimos') {
+        document.getElementById('modal').classList.remove('aberto');
+      } else if (modalAberto === 'confirmacao') {
+        document.getElementById('modal-confirmacao').classList.remove('aberto');
+        document.getElementById('nomeConvidado').value = '';
+        document.getElementById('nomeConvidado').classList.remove('erro');
+      }
       document.getElementById('btnFechar').classList.remove('visivel');
       document.body.classList.remove('modal-aberto');
+      modalAberto = null;
+    }
+
+    function confirmarPresenca(vai) {
+      var input = document.getElementById('nomeConvidado');
+      var nome = input.value.trim();
+      if (!nome) {
+        input.classList.add('erro');
+        input.focus();
+        return;
+      }
+      var msg = vai
+        ? nome + ' confirma presença no Chá do Oliver! 🎉'
+        : nome + ' infelizmente não poderá comparecer ao Chá do Oliver. 😢';
+      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
     }
 
     // Carregar presentes
