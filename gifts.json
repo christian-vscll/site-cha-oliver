@@ -4,7 +4,7 @@
     "name": "Toalha de Bebê",
     "description": "",
     "price": 20,
-    "image": "",
+    "image": "imagens/item-01.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-cd9ffb53-99aa-440f-afc2-689b77667d83"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Kit Escova",
     "description": "",
     "price": 30,
-    "image": "",
+    "image": "imagens/item-02.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-d8d007dd-98b3-4006-9e78-37bb53a6fcac"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Chocalho",
     "description": "",
     "price": 15,
-    "image": "",
+    "image": "imagens/item-03.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-510597b3-2b23-4804-a172-4338606c29bf"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Babá Eletrônica",
     "description": "",
     "price": 100,
-    "image": "",
+    "image": "imagens/item-04.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-10eb5593-c8d7-4f81-96e5-f2b33cae306c"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Lixeira Antiodor",
     "description": "",
     "price": 130,
-    "image": "",
+    "image": "imagens/item-05.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-c1ca9564-afa0-4dbe-aabd-35428c7f8d42"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Carrinho Organizador",
     "description": "",
     "price": 100,
-    "image": "",
+    "image": "imagens/item-06.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-3f776e95-ee45-4125-81c1-5986399ad242"
   },
   {
@@ -52,7 +52,7 @@
     "name": "Garrafinha de Bebê",
     "description": "",
     "price": 25,
-    "image": "",
+    "image": "imagens/item-07.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-3033dd38-677a-40df-b910-c150f515a28d"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Tapete Interativo",
     "description": "",
     "price": 67,
-    "image": "",
+    "image": "imagens/item-08.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-6cd89e62-227e-4896-b586-4e348c929a94"
   },
   {
@@ -68,7 +68,7 @@
     "name": "Kit Refeição",
     "description": "",
     "price": 25,
-    "image": "",
+    "image": "imagens/item-09.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-776e62bc-7e53-4495-b9c2-fd6af8fdb62d"
   },
   {
@@ -76,7 +76,7 @@
     "name": "Sabonete Johnson",
     "description": "",
     "price": 40,
-    "image": "",
+    "image": "imagens/item-10.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-077922cd-d162-4d19-8498-e0f9f12bfc0a"
   },
   {
@@ -84,7 +84,7 @@
     "name": "Kit Lixa de Unha",
     "description": "",
     "price": 20,
-    "image": "",
+    "image": "imagens/item-11.jpg",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-0fb0b668-212b-4358-8042-66495fb064ba"
   }
 ]
