@@ -46,5 +46,13 @@
     "price": 800,
     "image": "",
     "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-34fbb29f-9b48-474a-9d5d-9d1547077b2d"
+  },
+  {
+    "id": "item-teste",
+    "name": "Teste R$1",
+    "description": "Item de teste — remover depois",
+    "price": 1,
+    "image": "",
+    "paymentLink": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=195923401-7576ba1a-1440-493c-b645-d21ff7e8c919"
   }
 ]
