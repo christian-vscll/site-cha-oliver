@@ -189,8 +189,8 @@
           var imgHtml = g.image
             ? '<img src="' + g.image + '" alt="' + g.name + '" loading="lazy">'
             : '🎁';
-          var btn = g.stripePaymentLink
-            ? '<a class="card__btn" href="' + g.stripePaymentLink + '" target="_blank" rel="noopener">Presentear</a>'
+          var btn = g.paymentLink
+            ? '<a class="card__btn" href="' + g.paymentLink + '" target="_blank" rel="noopener">Presentear</a>'
             : '<span class="card__btn card__btn--indisponivel">Em breve</span>';
           return '<article class="card">'
             + '<div class="card__img">' + imgHtml + '</div>'
